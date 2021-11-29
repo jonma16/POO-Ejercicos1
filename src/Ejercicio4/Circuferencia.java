@@ -4,11 +4,13 @@ public class Circuferencia {
 	double radio;
 	String color;
 	
+	//Constructor
 	public Circuferencia(double r,String c) {
 		this.radio=r;
 		this.color=c;
 	}
 	
+	//Metodo para obtener el area
 	public double area() {
 		return 3.1416*this.radio*this.radio;
 	}
@@ -18,7 +20,7 @@ public class Circuferencia {
 	}
 	
 	public boolean isBig() {
-		if (radio<20) {
+		if (this.area()<20) {
 			return true;
 			
 		}
@@ -27,9 +29,19 @@ public class Circuferencia {
 		}
 	}
 	
-	public boolean isEqualTo(this.CircuferenciaC2) {
-		this.color=c2.color;
-		this.radio=c2.radio;
+	public boolean isEqualTo(Circuferencia c2) {
+		if (this.color==c2.color && this.radio==c2.radio) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+	}
+	
+	public void show() {
+		System.out.println("El radio de la circufencia es "+ this.radio);
+		System.out.println("El color de la circufencia es "+ this.color);
 	}
 
 }
