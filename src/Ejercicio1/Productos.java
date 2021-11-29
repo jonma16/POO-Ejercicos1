@@ -4,6 +4,7 @@ public class Productos {
 	private double precios;
 	private String nombre;
 	private int cantidad;
+	
 
 
 	public Productos(String nombre, double precio, int cantidad) {
